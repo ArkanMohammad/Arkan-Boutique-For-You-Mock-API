@@ -9,7 +9,7 @@
   -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Arkan Fashion For You - Mock API</title>
+    <title>Arkan Boutique For You - Mock API</title>
 
     <!-- 
     Here we connect the CSS file.
@@ -26,7 +26,7 @@
     It does not come from the API.
   -->
     <header class="header">
-      <h1>Welcome to Arkan Fashion For You <br>Dresses Store</h1>
+      <h1>Welcome to Arkan Boutique For You <br>Dresses Store</h1>
       <p>Learning GET and POST requests with Mock API</p>
     </header>
 
@@ -52,7 +52,7 @@
 
         Because in JavaScript we will select this form using:
 
-        document.getElementById("tshirtForm")
+        document.getElementById("dressForm")
 
         Then we will listen to the submit event.
       -->
@@ -107,7 +107,7 @@
             />
           </div>
 
-          <!-- T-shirt color input -->
+          <!-- dress color input -->
           <div class="form-group">
             <label for="color">Color</label>
 
@@ -119,7 +119,7 @@
             />
           </div>
 
-          <!-- T-shirt size input -->
+          <!-- dress size input -->
           <div class="form-group">
             <label for="size">Size</label>
 
@@ -136,12 +136,27 @@
             </select>
           </div>
 
+          <div class="form-group">
+            <label for="modelHeight">model height</label>
+
+            <input
+              type="number"
+              id="modelHeight"
+              placeholder="Example: 179"
+              required
+            />
+          </div>
           <!-- 
           When this button is clicked,
           the form submit event will happen.
         -->
           <button type="submit">Add A Dress</button>
         </form>
+          <img 
+          class="dress-side-image"
+          src="https://i.pinimg.com/736x/18/f7/6f/18f76fa70d04556427dcdf40c29acb9e.jpg"
+          alt="DressImage"
+        />
       </section>
 
       <!-- ===================================================== -->
@@ -149,7 +164,9 @@
       <!-- ===================================================== -->
 
       <section class="products-section">
-        <h2>Available T-Shirts</h2>
+
+        <h2>Available Dresses 👗</h2>
+        
 
         <!-- 
         This message appears while the data is loading.

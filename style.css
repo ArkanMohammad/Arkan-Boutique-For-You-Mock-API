@@ -24,7 +24,7 @@ body {
   Header design.
 */
 .header {
-  background-color: #222;
+  background-color: #df6bae;
   color: white;
   text-align: center;
   padding: 30px 20px;
@@ -55,7 +55,27 @@ body {
   margin-bottom: 30px;
   border-radius: 10px;
 }
+.form-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
+.form-section h2 {
+  width: 100%;
+}
+#dressForm {
+  flex: 1;
+  min-width: 0;
+}
+.dress-side-image {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  flex-shrink: 0;
+
+}
 /* 
   Title spacing.
 */
@@ -74,7 +94,6 @@ h2 {
   Labels appear above inputs.
 */
 label {
-  display: block;
   margin-bottom: 6px;
   font-weight: bold;
 }
@@ -95,7 +114,7 @@ select {
   Button styling.
 */
 button {
-  background-color: #222;
+  background-color: #df6bae;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -116,7 +135,7 @@ button:hover {
 
   We use CSS Grid to create responsive cards.
 */
-.tshirt-container {
+.dress-container {
   display: grid;
 
   /* 
@@ -135,7 +154,7 @@ button:hover {
 /* 
   Product card design.
 */
-.tshirt-card {
+.dress-card {
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: white;
@@ -146,14 +165,14 @@ button:hover {
 /* 
   Simple hover animation.
 */
-.tshirt-card:hover {
+.dress-card:hover {
   transform: scale(1.02);
 }
 
 /* 
   Product image.
 */
-.tshirt-card img {
+.dress-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
@@ -162,11 +181,11 @@ button:hover {
 /* 
   Product information area.
 */
-.tshirt-info {
+.dress-info {
   padding: 15px;
 }
 
-.tshirt-info h3 {
+.dress-info h3 {
   margin-bottom: 10px;
 }
 
