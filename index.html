@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- 
+    This makes the website responsive.
+    It tells the browser to adjust the layout based on screen size.
+  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Arkan Fashion For You - Mock API</title>
+
+    <!-- 
+    Here we connect the CSS file.
+    CSS is responsible for the design.
+  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- 
+    HEADER SECTION
+
+    This is only static HTML.
+    It does not come from the API.
+  -->
+    <header class="header">
+      <h1>T-Shirt Store</h1>
+      <p>Learning GET and POST requests with Mock API</p>
+    </header>
+
+    <main class="main-container">
+      <!-- ===================================================== -->
+      <!-- FORM SECTION -->
+      <!-- ===================================================== -->
+
+      <!-- 
+      This section is for adding a new T-shirt.
+
+      The user will fill the form.
+      Then JavaScript will take the values from the inputs.
+      Then JavaScript will send these values to the API using POST.
+    -->
+      <section class="form-section">
+        <h2>Add New T-Shirt</h2>
+
+        <!-- 
+        This form has an id="tshirtForm".
+
+        Why do we need the id?
+
+        Because in JavaScript we will select this form using:
+
+        document.getElementById("tshirtForm")
+
+        Then we will listen to the submit event.
+      -->
+        <form id="tshirtForm">
+          <!-- T-shirt name input -->
+          <div class="form-group">
+            <label for="name">T-Shirt Name</label>
+
+            <!-- 
+            The id="name" is important.
+            We will use it in JavaScript to get the value.
+          -->
+            <input
+              type="text"
+              id="name"
+              placeholder="Example: Black Oversized T-Shirt"
+              required
+            />
+          </div>
+
+          <!-- T-shirt price input -->
+          <div class="form-group">
+            <label for="price">Price</label>
+
+            <!-- 
+            type="number" allows only numbers.
+            But important note:
+            Even number inputs return their value as a string in JavaScript.
+            That is why later we will convert it using Number().
+          -->
+            <input
+              type="number"
+              id="price"
+              placeholder="Example: 25"
+              required
+            />
+          </div>
+
+          <!-- T-shirt image input -->
+          <div class="form-group">
+            <label for="image">Image URL</label>
+
+            <!-- 
+            Here the user pastes an image URL.
+            Later we will show this image inside the product card.
+          -->
+            <input
+              type="text"
+              id="image"
+              placeholder="Paste image URL"
+              required
+            />
+          </div>
+
+          <!-- T-shirt color input -->
+          <div class="form-group">
+            <label for="color">Color</label>
+
+            <input
+              type="text"
+              id="color"
+              placeholder="Example: Black"
+              required
+            />
+          </div>
+
+          <!-- T-shirt size input -->
+          <div class="form-group">
+            <label for="size">Size</label>
+
+            <!-- 
+            Select gives the user fixed options.
+            This is better than free text when we have known values.
+          -->
+            <select id="size" required>
+              <option value="">Choose size</option>
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>
+            </select>
+          </div>
+
+          <!-- 
+          When this button is clicked,
+          the form submit event will happen.
+        -->
+          <button type="submit">Add T-Shirt</button>
+        </form>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- PRODUCTS SECTION -->
+      <!-- ===================================================== -->
+
+      <section class="products-section">
+        <h2>Available T-Shirts</h2>
+
+        <!-- 
+        This message appears while the data is loading.
+        In JavaScript, we will change its text.
+      -->
+        <p id="loadingMessage">Loading T-shirts...</p>
+
+        <!-- 
+        This container starts empty.
+
+        JavaScript will create product cards and put them inside this div.
+
+        This is DOM manipulation:
+        We use JS to change what appears in HTML.
+      -->
+        <div id="tshirtContainer" class="tshirt-container"></div>
+      </section>
+    </main>
+
+    <!-- 
+    We connect JavaScript at the end of body.
+
+    Why at the end?
+
+    Because we want the HTML elements to load first.
+    Then JavaScript can find them.
+  -->
+    <script src="script.js"></script>
+  </body>
+</html>
