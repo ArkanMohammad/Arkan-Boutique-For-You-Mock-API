@@ -28,12 +28,13 @@ function displayDress(dresses){
         card.innerHTML = `
         <img src = "${dress.image}" alt = "${dress.name}"
         <section>
+        <h3> ${dress.name}</h3>
         <p> Color : ${dress.color}</p>
-        <p> size : ${dress.color}</p>
-        <p> price : ${dress.price} $</p>modelHeight
+        <p> size : ${dress.size}</p>
+        <p> price : ${dress.price} $</p>
         <p> modelHeight : ${dress.modelHeight}</p>
         </section>
-        `
+        `;
         //add the dress to DOM
         dressContainer.appendChild(card);
     });
